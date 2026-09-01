@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Download</title>
+
+```
+<script>
+    window.onload = function () {
+        // Inicia o download
+        const link = document.createElement("a");
+        link.href = "https://seusite.com/arquivo.exe";
+        link.download = "arquivo.exe";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+
+        // Abre/redireciona após iniciar o download
+        setTimeout(() => {
+            window.location.href = "https://outro-site.com";
+        }, 1000);
+    };
+</script>
+```
+
+</head>
+
+<body>
+    <p>Seu download está sendo iniciado...</p>
+</body>
+</html>
